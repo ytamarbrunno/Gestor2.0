@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #ff80bf;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .menu button {
+    background-color: #fff;
+    color: #ff80bf;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .menu button:hover {
+    background-color: #ecb6da;
+  }
+  
+  .resumo-container {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .resumo-box {
+    background-color: #f9f9f9;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+    width: 25%;
+    background-color: #ff80bf;
+    color: white;
+  }
+  
+  .resumo-box h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .resumo-box p {
+    font-size: 24px;
+    color: white;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="text"], input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #ff80bf;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #ff66cc;
+  }
+  
+  .client-list, .boleto-list {
+    margin-top: 20px;
+  }
+  
+  .client, .boleto {
+    background-color: #f8f8f8;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  .client strong, .boleto strong {
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .client .progress-bar {
+    background-color: #ddd;
+    border-radius: 5px;
+    height: 10px;
+    margin-top: 10px;
+  }
+  
+  .client .progress {
+    background-color: #ff80bf;
+    height: 100%;
+    border-radius: 5px;
+  }
+  
+  .update-section {
+    margin-top: 10px;
+  }
+  
+  .update-section input {
+    padding: 5px;
+    margin-right: 10px;
+    width: 100px;
+  }
+  
+  .update-section button {
+    padding: 5px;
+    background-color: #ff80bf;
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .update-section button:hover {
+    background-color: #ff66cc;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
