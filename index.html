@@ -5,64 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestão de Clientes e Boletos</title>
     <link rel="stylesheet" href="style.css">
-
-    <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
 </head>
 <body>
     <div class="container">
-        <!-- Menu de Navegação -->
         <div class="menu">
-            <button id="btnClientes" onclick="mostrarClientes()">Clientes</button>
-            <button id="btnBoletos" onclick="mostrarBoletos()">Boletos</button>
-            <button id="btnResumo" onclick="mostrarResumo()">Resumo</button>
+            <button id="btnClientes">Clientes</button>
+            <button id="btnBoletos">Boletos</button>
+            <button id="btnResumo">Resumo</button>
         </div>
+<div id="clientes" class="hidden">
+    <h2>Clientes</h2>
+    <div class="form">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome">
+        
+        <label for="perfume">Perfume</label>
+        <input type="text" id="perfume">
+        
+        <label for="valorTotal">Valor Total</label>
+        <input type="number" id="valorTotal">
+        
+        <label for="valorPago">Valor Pago</label>
+        <input type="number" id="valorPago">
+        
+        <button onclick="adicionarCliente()">Adicionar Cliente</button>
+    </div>
+    <div class="search">
+        <input type="text" id="searchCliente" placeholder="Pesquisar por nome..." oninput="pesquisarClientes()">
+    </div>
 
-        <!-- Seção de Clientes -->
-        <div id="clientes" class="hidden">
-            <h2>Clientes</h2>
-            <div class="form">
-                <label for="nome">Nome</label>
-                <input type="text" id="nome">
+    <div class="client-list" id="clientList"></div>
+</div>
+    <div id="boletos" class="hidden">
+        <h2>Boletos</h2>
+        <div class="form">
+             <label for="boletoDescricao">Descrição do Boleto</label>
+             <input type="text" id="boletoDescricao">
                 
-                <label for="perfume">Produtos</label>
-                <input type="text" id="perfume">
+             <label for="boleto">Valor do Boleto</label>
+            <input type="number" id="boleto">
                 
-                <label for="valorTotal">Valor Total</label>
-                <input type="number" id="valorTotal">
-                
-                <label for="valorPago">Valor Pago</label>
-                <input type="number" id="valorPago">
-                
-                <button onclick="adicionarCliente()">Adicionar Cliente</button>
-            </div>
-            
-            <!-- Barra de Pesquisa -->
-            <div class="search">
-                <input type="text" id="searchCliente" placeholder="Pesquisar por nome..." oninput="pesquisarClientes()">
-            </div>
-
-            <div class="client-list" id="clientList"></div>
+             <button onclick="adicionarBoleto()">Adicionar Boleto</button>
         </div>
-
-        <!-- Seção de Boletos -->
-        <div id="boletos" class="hidden">
-            <h2>Boletos</h2>
-            <div class="form">
-                <label for="boletoDescricao">Descrição do Boleto</label>
-                <input type="text" id="boletoDescricao">
-                
-                <label for="boleto">Valor do Boleto</label>
-                <input type="number" id="boleto">
-                
-                <button onclick="adicionarBoleto()">Adicionar Boleto</button>
-            </div>
-            <div class="boleto-list" id="boletoList"></div>
-            <button id="excluirBoletos">Excluir Boletos</button>
+        <div class="boleto-list" id="boletoList"></div>
+        <button id="excluirBoletos">Excluir Boletos</button>
         </div>
-
-        <!-- Seção de Resumo -->
         <div id="resumo" class="hidden">
             <h2>Resumo</h2>
             <div class="resumo-container">
@@ -85,3 +72,5 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+
